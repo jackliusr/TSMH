@@ -26,7 +26,7 @@ WORD_START_IDX = 1996
 if config.mode[0] == 's':
 	import fasttext
 	# model_dir = './yelp_polarity_model'
-	model_dir = '../sentiment/yelp_polarity_model'
+	# model_dir = '../sentiment/yelp_polarity_model'
 	model = fasttext.load_model(model_dir)
 
 # os.environ['CORENLP_HOME'] = '/home/zms/stanford-corenlp-full-2018-10-05/'
@@ -375,7 +375,7 @@ def generate_candidate_input_with_mask(input_ids, sequence_length, ind, prob, se
 '''
 def sample_from_candidate(prob_candidate):
 	return np.argmax(prob_candidate)
-''' 
+'''
 def sample_from_candidate(prob_candidate):
 	return choose_action(normalize(prob_candidate))
 
